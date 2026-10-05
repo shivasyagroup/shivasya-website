@@ -41,24 +41,27 @@
   <div class="wrap content">
     <p>Want to join, book us for an event, or just learn more? Send us a message and we'll get back to you.</p>
 
-    <form class="contact-form" action="https://formsubmit.co/shivasyadholtasha@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New message from shivasya.org">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="_honey" style="display:none">
-      <label>Your name
-        <input type="text" name="name" required>
-      </label>
-      <label>Email address
-        <input type="email" name="email" required>
-      </label>
-      <label>WhatsApp phone number <span class="opt">(optional)</span>
-        <input type="tel" name="whatsapp" placeholder="+1 704 555 0123">
-      </label>
-      <label>Message
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary" style="color:#fff">Send message</button>
-    </form>
+    <div id="form-wrap">
+      <form id="contactForm" class="contact-form" action="https://formsubmit.co/shivasyadholtasha@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from shivasya.org">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <label>Your name
+          <input type="text" name="name" required>
+        </label>
+        <label>Email address
+          <input type="email" name="email" required>
+        </label>
+        <label>WhatsApp phone number <span class="opt">(optional)</span>
+          <input type="tel" name="whatsapp" placeholder="+1 704 555 0123">
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <p id="form-error" hidden style="color:var(--crimson);font-weight:700;margin:0">Something went wrong — please try again, or email us at shivasyadholtasha@gmail.com.</p>
+        <button type="submit" class="btn btn-primary" style="color:#fff">Send message</button>
+      </form>
+    </div>
 
     <h2 style="margin-top:2rem">Interested in joining the team?</h2>
     <p>No experience needed. Register online, then come to any Tuesday or Thursday practice at 7 PM.</p>
@@ -107,5 +110,46 @@
   </div>
   <div class="legal"><span class="jai">Jai Shivaji</span> &nbsp;&middot;&nbsp; Shivasya Dhol Tasha Pathak of Carolinas — Charlotte, NC &nbsp;&middot;&nbsp; 501(c)(3) nonprofit</div>
 </footer>
+
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var orig = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    document.getElementById('form-error').hidden = true;
+    var payload = {
+      name: form.elements['name'].value,
+      email: form.elements['email'].value,
+      whatsapp: form.elements['whatsapp'].value,
+      message: form.elements['message'].value,
+      _subject: 'New message from shivasya.org'
+    };
+    fetch('https://formsubmit.co/ajax/shivasyadholtasha@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d && (d.success === 'true' || d.success === true)) {
+        document.getElementById('form-wrap').innerHTML =
+          '<div class="callout"><p style="margin:0"><strong>Thank you! 🙏</strong> Your message has been sent — we’ll be in touch soon.</p></div>';
+        document.getElementById('form-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        btn.disabled = false; btn.textContent = orig;
+        document.getElementById('form-error').hidden = false;
+      }
+    })
+    .catch(function(){
+      btn.disabled = false; btn.textContent = orig;
+      document.getElementById('form-error').hidden = false;
+    });
+  });
+})();
+</script>
 </body>
 </html>
