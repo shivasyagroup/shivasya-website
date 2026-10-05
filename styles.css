@@ -106,3 +106,10 @@ footer.site .flinks{list-style:none;padding:0;margin:0;font-size:14px;line-heigh
 footer.site .social a{display:inline-block;margin-right:.9rem;font-weight:800;font-size:14px;border-bottom:1px solid rgba(252,235,211,.4)}
 footer.site .legal{max-width:var(--maxw);margin:1.4rem auto 0;padding-top:1rem;border-top:1px solid rgba(252,235,211,.25);font-size:12.5px;opacity:.85;text-align:center}
 footer.site .jai{font-family:var(--serif);font-weight:700;opacity:1}
+
+.contact-form{max-width:var(--read);display:flex;flex-direction:column;gap:.9rem;margin-top:.5rem}
+.contact-form label{font-weight:700;font-size:14px;color:var(--crimson-ink);display:flex;flex-direction:column;gap:.35rem}
+.contact-form .opt{font-weight:500;color:var(--muted)}
+.contact-form input,.contact-form textarea{font-family:var(--sans);font-size:15px;padding:.6rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);width:100%;box-sizing:border-box}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--saffron);border-color:var(--saffron)}
+.contact-form button{align-self:flex-start;margin-top:.3rem;border:none;cursor:pointer}
