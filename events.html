@@ -40,9 +40,15 @@
 <section>
   <div class="wrap">
     <p class="ev-intro">Since 2013, Shivasya has performed at festivals and served the community across the Carolinas. Not every event is a dhol-tasha performance — some are community service (seva), and the tags tell you which is which.</p>
-    <h2 style="font-size:22px">Upcoming</h2>
+    <div class="ev-filter" id="ev-filter" role="group" aria-label="Filter events">
+      <button type="button" data-f="all" class="active">All</button>
+      <button type="button" data-f="performance">🥁 Performances</button>
+      <button type="button" data-f="community">🤝 Community</button>
+      <button type="button" data-f="other">🎉 Events</button>
+    </div>
+    <h2 style="font-size:22px" id="up-head">Upcoming</h2>
     <div id="upcoming-root"></div>
-    <h2 style="font-size:22px;margin-top:2rem">By year</h2>
+    <h2 style="font-size:22px;margin-top:2rem" id="yr-head">By year</h2>
     <div id="events-root"><p style="color:var(--muted)">Loading events&hellip;</p></div>
     <div class="callout" style="margin-top:1.6rem"><p style="margin:0"><strong>Current members:</strong> see upcoming events and RSVP in the <a href="https://attendance.shivasya.org">member portal</a>.</p></div>
   </div>
@@ -86,14 +92,17 @@
 <script src="events.js"></script>
 <script>
 (function () {
+  var upHead = document.getElementById('up-head');
   var upRoot = document.getElementById('upcoming-root');
   var root = document.getElementById('events-root');
+  var filterBar = document.getElementById('ev-filter');
   var data = (window.SHIVASYA_EVENTS || []).slice();
   var TAG = { performance: '🥁 Performance', community: '🤝 Community', other: '🎉 Event' };
+  function typeOf(e){ return (e.type === 'performance' || e.type === 'community') ? e.type : 'other'; }
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]); }); }
   function card(e, up) {
-    var cls = (e.type === 'performance' || e.type === 'community') ? e.type : 'other';
-    return '<a class="ev-card" href="event.html?id=' + encodeURIComponent(e.id) + '"' + (up ? ' style="border-color:var(--saffron)"' : '') + '>'
+    var cls = typeOf(e);
+    return '<a class="ev-card" href="event?id=' + encodeURIComponent(e.id) + '"' + (up ? ' style="border-color:var(--saffron)"' : '') + '>'
       + '<div class="en">' + esc(e.name) + '</div>'
       + '<div class="ed">' + esc(e.date || '') + '</div>'
       + '<span class="ev-tag ' + cls + '">' + (TAG[e.type] || TAG.other) + '</span>'
@@ -102,23 +111,43 @@
   var d = new Date();
   var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   var isUpcoming = function (e) { return e.isoDate && e.isoDate >= today; };
-  var upcoming = data.filter(isUpcoming).sort(function (a, b) { return a.isoDate.localeCompare(b.isoDate); });
-  var archive = data.filter(function (e) { return !isUpcoming(e); });
 
-  upRoot.innerHTML = upcoming.length
-    ? '<div class="ev-grid" style="padding:0">' + upcoming.map(function (e) { return card(e, true); }).join('') + '</div>'
-    : '<p style="color:var(--muted);margin:0">No upcoming events scheduled right now — check back soon, or see the <a href="https://attendance.shivasya.org">member portal</a>.</p>';
+  function render(filter) {
+    var rows = (filter && filter !== 'all') ? data.filter(function (e) { return typeOf(e) === filter; }) : data;
+    var upcoming = rows.filter(isUpcoming).sort(function (a, b) { return a.isoDate.localeCompare(b.isoDate); });
+    var archive = rows.filter(function (e) { return !isUpcoming(e); });
 
-  if (!archive.length) { root.innerHTML = '<p style="color:var(--muted);margin:0">Events will appear here soon.</p>'; return; }
-  var byYear = {};
-  archive.forEach(function (e) { (byYear[e.year] = byYear[e.year] || []).push(e); });
-  var years = Object.keys(byYear).map(Number).sort(function (a, b) { return b - a; });
-  root.innerHTML = years.map(function (yr, idx) {
-    var evs = byYear[yr];
-    return '<details class="ev-year"' + (idx === 0 ? ' open' : '') + '>'
-      + '<summary><span>' + yr + '</span><span class="yr-count">' + evs.length + ' event' + (evs.length !== 1 ? 's' : '') + '</span></summary>'
-      + '<div class="ev-grid">' + evs.map(function (e) { return card(e, false); }).join('') + '</div></details>';
-  }).join('');
+    if (upcoming.length) {
+      upHead.style.display = '';
+      upRoot.style.display = '';
+      upRoot.innerHTML = '<div class="ev-grid" style="padding:0">' + upcoming.map(function (e) { return card(e, true); }).join('') + '</div>';
+    } else {
+      upHead.style.display = 'none';
+      upRoot.style.display = 'none';
+      upRoot.innerHTML = '';
+    }
+
+    if (!archive.length) { root.innerHTML = '<p style="color:var(--muted);margin:0">No events to show for this filter yet.</p>'; return; }
+    var byYear = {};
+    archive.forEach(function (e) { (byYear[e.year] = byYear[e.year] || []).push(e); });
+    var years = Object.keys(byYear).map(Number).sort(function (a, b) { return b - a; });
+    root.innerHTML = years.map(function (yr, idx) {
+      var evs = byYear[yr];
+      return '<details class="ev-year"' + (idx === 0 ? ' open' : '') + '>'
+        + '<summary><span>' + yr + '</span><span class="yr-count">' + evs.length + ' event' + (evs.length !== 1 ? 's' : '') + '</span></summary>'
+        + '<div class="ev-grid">' + evs.map(function (e) { return card(e, false); }).join('') + '</div></details>';
+    }).join('');
+  }
+
+  if (filterBar) {
+    filterBar.addEventListener('click', function (ev) {
+      var btn = ev.target.closest('button[data-f]');
+      if (!btn) return;
+      Array.prototype.forEach.call(filterBar.querySelectorAll('button'), function (b) { b.classList.toggle('active', b === btn); });
+      render(btn.getAttribute('data-f'));
+    });
+  }
+  render('all');
 })();
 </script>
 </body>

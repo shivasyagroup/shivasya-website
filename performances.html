@@ -44,7 +44,9 @@
     <div class="roles">
       <span>Ganeshotsav</span><span>Festival of India</span><span>Harrisburg Multicultural Festival</span><span>Brahmotsav</span><span>Sai Temple</span><span>Gandhi Jayanti</span>
     </div>
-    <div class="callout" style="margin-top:1.2rem"><p style="margin:0">See our performances on <a href="https://www.facebook.com/ShivasyaDholTashaPathak">Facebook</a>, <a href="https://www.instagram.com/shivasyadholtasha/">Instagram</a>, and <a href="https://www.youtube.com/@ShivasyaDholTashaPathak">YouTube</a>. A photo and video gallery is coming to the site soon.</p></div>
+    <h2 style="font-size:22px;margin-top:2rem">Where we've performed</h2>
+    <div id="perf-root"><p style="color:var(--muted);margin:0">Loading&hellip;</p></div>
+    <div class="callout" style="margin-top:1.4rem"><p style="margin:0">See our performances on <a href="https://www.facebook.com/ShivasyaDholTashaPathak">Facebook</a>, <a href="https://www.instagram.com/shivasyadholtasha/">Instagram</a>, and <a href="https://www.youtube.com/@ShivasyaDholTashaPathak">YouTube</a>. A photo and video gallery is coming to the site soon.</p></div>
     <p style="margin-top:1.4rem">Want Shivasya to perform at your event? <a href="contact.html" style="font-weight:800;color:var(--saffron)">Get in touch &rarr;</a></p>
   </div>
 </section>
@@ -83,5 +85,27 @@
   </div>
   <div class="legal"><span class="jai">Jai Shivaji</span> &nbsp;&middot;&nbsp; Shivasya Dhol Tasha Pathak of Carolinas — Charlotte, NC &nbsp;&middot;&nbsp; 501(c)(3) nonprofit</div>
 </footer>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  var root = document.getElementById('perf-root');
+  if (!root) return;
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]); }); }
+  var perf = (window.SHIVASYA_EVENTS || []).filter(function (e) { return e.type === 'performance'; });
+  // newest year first; preserve within-year order (already newest-first in events.js)
+  perf = perf.map(function (e, i) { return [e, i]; })
+    .sort(function (a, b) { return (b[0].year - a[0].year) || (a[1] - b[1]); })
+    .map(function (p) { return p[0]; });
+  if (!perf.length) { root.innerHTML = '<p style="color:var(--muted);margin:0">Performance highlights are coming soon.</p>'; return; }
+  root.innerHTML = '<div class="ev-grid" style="padding:0">' + perf.map(function (e) {
+    return '<a class="ev-card" href="event?id=' + encodeURIComponent(e.id) + '">'
+      + '<div class="en">' + esc(e.name) + '</div>'
+      + '<div class="ed">' + esc(e.date || e.year) + '</div>'
+      + '<span class="ev-tag performance">🥁 Performance</span>'
+      + '</a>';
+  }).join('') + '</div>';
+})();
+</script>
 </body>
 </html>

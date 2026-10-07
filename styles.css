@@ -114,6 +114,10 @@ footer.site .jai{font-family:var(--serif);font-weight:700;opacity:1}
 .contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--saffron);border-color:var(--saffron)}
 .contact-form button{align-self:flex-start;margin-top:.3rem;border:none;cursor:pointer}
 .ev-intro{max-width:var(--read);margin-bottom:1.5rem}
+.ev-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.4rem}
+.ev-filter button{font-family:var(--sans);font-size:13.5px;font-weight:700;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:20px;padding:.4rem .9rem;transition:all .15s}
+.ev-filter button:hover{border-color:var(--saffron);color:var(--crimson-ink)}
+.ev-filter button.active{background:var(--saffron);border-color:var(--saffron);color:#fff}
 details.ev-year{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:var(--surface);overflow:hidden}
 details.ev-year>summary{list-style:none;cursor:pointer;padding:.9rem 1.1rem;font-family:var(--serif);font-size:20px;font-weight:700;color:var(--crimson-ink);display:flex;align-items:center;gap:10px}
 details.ev-year>summary::-webkit-details-marker{display:none}
