@@ -31,6 +31,18 @@ window.SHIVASYA_EVENTS = [
     photos: [],
     videos: []
   },
+  {
+    id: "shivjayanti-5k-2027",
+    year: 2027,
+    date: "February 23, 2027",
+    isoDate: "2027-02-23",
+    name: "Shiv Jayanti 5K Run & Walk",
+    type: "other",
+    location: "Charlotte, NC",
+    description: "Our annual Shiv Jayanti 5K Run & Walk returns. Details coming soon.",
+    photos: [],
+    videos: []
+  },
 
   // ---------------------------------------------------------------- 2026
   {
