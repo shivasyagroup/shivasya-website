@@ -73,7 +73,7 @@ window.SHIVASYA_EVENTS = [
     name: "Triad Hindu Temple Pran Pratishtha",
     type: "performance",
     location: "Oak Ridge (Greensboro), NC",
-    description: "Shivasya travelled to the Triad Hindu Temple in Oak Ridge, near Greensboro — the team's first away performance of the season — to perform for the temple's Pran Pratishtha (consecration) before a packed and emotional crowd. Led by Vrijila and Shishir Khandekar.",
+    description: "Shivasya travelled to the Triad Hindu Temple in Oak Ridge, near Greensboro — the team's first away performance of the season — to perform for the temple's Pran Pratishtha (consecration) before a packed and emotional crowd. Led by Vrijala Narkar and Shishir Khandekar.",
     photos: [],
     videos: []
   },
@@ -117,7 +117,7 @@ window.SHIVASYA_EVENTS = [
     name: "Guru Purnima Palkhi Seva",
     type: "performance",
     location: "Shree Sai Gurudev Datta Mandir, Huntersville",
-    description: "Shivasya performed the Palkhi (palanquin) seva for Guru Purnima at the Shree Sai Gurudev Datta Mandir in Huntersville, during the rare Guru Pushya Yoga. Led by Jayin and Vimoh Mundle.",
+    description: "Shivasya performed the Palkhi (palanquin) seva for Guru Purnima at the Shree Sai Gurudev Datta Mandir in Huntersville, during the rare Guru Pushya Yoga. Led by Jayin Hiremath and Vimoh Mundle.",
     photos: [],
     videos: []
   },
