@@ -40,7 +40,7 @@ window.SHIVASYA_EVENTS = [
     name: "Gandhi Jayanti — World Wellness & Unity Festival",
     type: "performance",
     location: "Gandhi Park, Uptown Charlotte",
-    description: "Shivasya performed at the World Wellness & Unity Festival — a free community event hosted by the Charlotte Asian Heritage Association (CAHA) in honor of the birth anniversary of Mahatma Gandhi. Held from 10 AM to noon at Gandhi Park on East Trade Street in Uptown Charlotte, the morning brought communities together to foster global peace, holistic well-being, and collective harmony.",
+    description: "Shivasya performed at the World Wellness & Unity Festival — a free community event hosted by the Charlotte Asian Heritage Association (CAHA) in honor of the birth anniversary of Mahatma Gandhi. Held from 10 AM to noon at Gandhi Park on East Trade Street in Uptown Charlotte, the morning brought communities together to foster global peace, holistic well-being, and collective harmony. Led by Niti and Manish.",
     photos: [],
     videos: []
   },
@@ -73,7 +73,7 @@ window.SHIVASYA_EVENTS = [
     name: "Triad Hindu Temple Pran Pratishtha",
     type: "performance",
     location: "Oak Ridge (Greensboro), NC",
-    description: "Shivasya travelled to the Triad Hindu Temple in Oak Ridge, near Greensboro — the team's first away performance of the season — to perform for the temple's Pran Pratishtha (consecration) before a packed and emotional crowd.",
+    description: "Shivasya travelled to the Triad Hindu Temple in Oak Ridge, near Greensboro — the team's first away performance of the season — to perform for the temple's Pran Pratishtha (consecration) before a packed and emotional crowd. Led by Vrijila and Shishir.",
     photos: [],
     videos: []
   },
@@ -84,7 +84,7 @@ window.SHIVASYA_EVENTS = [
     name: "Vedic Mandir Pran Pratishtha Ceremonies",
     type: "performance",
     location: "Hindu Center of Charlotte",
-    description: "Through the summer, Shivasya performed at the new Vedic Mandir of the Hindu Center of Charlotte for a series of historic Pran Pratishtha (consecration) ceremonies — beginning with the first Ganesh Pran Pratishtha in June (led by the team's girls, with a Jal Yatra and Kalash procession), followed by the Shiv Parivar, Ram Parivar, and Jhulelal consecrations through September.",
+    description: "Through the summer, Shivasya performed at the new Vedic Mandir of the Hindu Center of Charlotte for a series of historic Pran Pratishtha (consecration) ceremonies — beginning with the first Ganesh Pran Pratishtha in June (led by the team's girls, with a Jal Yatra and Kalash procession), followed by the Shiv Parivar, Ram Parivar, and Jhulelal consecrations through September. The Ram Parivar consecration was led by Atharva and Vimoh.",
     photos: [],
     videos: []
   },
@@ -117,7 +117,7 @@ window.SHIVASYA_EVENTS = [
     name: "Guru Purnima Palkhi Seva",
     type: "performance",
     location: "Shree Sai Gurudev Datta Mandir, Huntersville",
-    description: "Shivasya performed the Palkhi (palanquin) seva for Guru Purnima at the Shree Sai Gurudev Datta Mandir in Huntersville, during the rare Guru Pushya Yoga.",
+    description: "Shivasya performed the Palkhi (palanquin) seva for Guru Purnima at the Shree Sai Gurudev Datta Mandir in Huntersville, during the rare Guru Pushya Yoga. Led by Jayin and Vimoh.",
     photos: [],
     videos: []
   },
