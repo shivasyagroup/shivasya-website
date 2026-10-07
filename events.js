@@ -59,7 +59,7 @@ window.SHIVASYA_EVENTS = [
     name: "Humanity Blood Donation Drive",
     type: "community",
     location: "Vivek Hall, Hindu Center of Charlotte",
-    description: "Our annual Humanity Blood Donation Drive with the American Red Cross, the Charlotte Marathi Mandal, and the Hindu Center of Charlotte, held in Vivek Hall. 132 people registered and 110 came forward to donate. Organized by Milind Bansode, Jaanvi Holé, Shurya Bansode, Mahesh Bhor, and Rahul Garad.",
+    description: "Our annual Humanity Blood Donation Drive with the American Red Cross, the Charlotte Marathi Mandal, and the Hindu Center of Charlotte, held in Vivek Hall. 132 people registered and 110 came forward to donate. Led by Milind Bansode, Jaanvi Holé, Shurya Bansode, Mahesh Bhor, and Rahul Garad.",
     photos: [],
     videos: []
   },
@@ -92,7 +92,7 @@ window.SHIVASYA_EVENTS = [
     name: "Shiv Jayanti 5K Run & Walk",
     type: "other",
     location: "Hindu Center of Charlotte",
-    description: "The second annual Shiv Jayanti 5K Run & Walk — a community wellness event held alongside the food donation drive. Registration filled to capacity (“housefull”) this year. Organized by Chinmay Kulkarni and Amit Bidre.",
+    description: "The second annual Shiv Jayanti 5K Run & Walk — a community wellness event held alongside the food donation drive. Registration filled to capacity (“housefull”) this year. Led by Chinmay Kulkarni and Amit Bidre.",
     photos: [],
     videos: []
   },
@@ -103,7 +103,7 @@ window.SHIVASYA_EVENTS = [
     name: "Shiv Jayanti Food Donation Drive",
     type: "community",
     location: "Hindu Center of Charlotte",
-    description: "Our annual Shiv Jayanti food donation drive with the Charlotte Marathi Mandal, held at the Hindu Center of Charlotte from 8 AM. Volunteers collected and packed donations for families in need. Organized by Jaanvi Holé and Mahesh Bhor.",
+    description: "Our annual Shiv Jayanti food donation drive with the Charlotte Marathi Mandal, held at the Hindu Center of Charlotte from 8 AM. Volunteers collected and packed donations for families in need. Led by Jaanvi Holé and Mahesh Bhor.",
     photos: [],
     videos: []
   },
@@ -116,7 +116,7 @@ window.SHIVASYA_EVENTS = [
     name: "Shiv Jayanti 5K Run & Walk",
     type: "other",
     location: "Charlotte, NC",
-    description: "The inaugural Shiv Jayanti 5K Run & Walk. Despite talk of freezing cold, nearly 200 people took part — from three-year-olds to seventy-five-year-olds — in a wonderful show of community engagement. Organized by Amit Bidre and Chinmay Kulkarni.",
+    description: "The inaugural Shiv Jayanti 5K Run & Walk. Despite talk of freezing cold, nearly 200 people took part — from three-year-olds to seventy-five-year-olds — in a wonderful show of community engagement. Led by Amit Bidre and Chinmay Kulkarni.",
     photos: [],
     videos: []
   },
