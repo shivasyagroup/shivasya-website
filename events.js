@@ -22,11 +22,11 @@ window.SHIVASYA_EVENTS = [
   {
     id: "gandhi-jayanti-2026",
     year: 2026,
-    date: "October 2026",
-    name: "Gandhi Jayanti Performance",
+    date: "October 3, 2026",
+    name: "Gandhi Jayanti — World Wellness & Unity Festival",
     type: "performance",
-    location: "Charlotte, NC",
-    description: "A dhol-tasha performance by Shivasya around Gandhi Jayanti. More details coming soon.",
+    location: "Gandhi Park, Uptown Charlotte",
+    description: "Shivasya performed at the World Wellness & Unity Festival — a free community event hosted by the Charlotte Asian Heritage Association (CAHA) in honor of the birth anniversary of Mahatma Gandhi. Held from 10 AM to noon at Gandhi Park on East Trade Street in Uptown Charlotte, the morning brought communities together to foster global peace, holistic well-being, and collective harmony.",
     photos: [],
     videos: []
   },
