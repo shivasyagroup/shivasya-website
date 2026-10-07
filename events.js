@@ -5,6 +5,9 @@
     id          unique slug, lowercase-with-dashes (used in the URL: event.html?id=<id>)
     year        number
     date        display string: "August 27, 2022" or "August 2022" or "2022"
+    isoDate     optional "YYYY-MM-DD". If it's today or in the future, the event
+                shows in the "Upcoming" section at the top; once the date passes it
+                moves into the year archive automatically. Leave off for past events.
     name        event name
     type        "performance" (dhol-tasha), "community" (seva/volunteer), or "other"
     location    optional
