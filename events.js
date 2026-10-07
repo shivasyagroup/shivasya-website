@@ -18,6 +18,20 @@
   Newest events sort to the top automatically (by year; within a year, array order).
 */
 window.SHIVASYA_EVENTS = [
+  // ---------------------------------------------------------------- 2026 (upcoming)
+  {
+    id: "harrisburg-multicultural-2026",
+    year: 2026,
+    date: "November 3, 2026",
+    isoDate: "2026-11-03",
+    name: "Harrisburg Multicultural Festival",
+    type: "performance",
+    location: "Harrisburg, NC",
+    description: "Shivasya performs at the Harrisburg Multicultural Festival, a celebration of the many cultures of the Carolinas.",
+    photos: [],
+    videos: []
+  },
+
   // ---------------------------------------------------------------- 2026
   {
     id: "gandhi-jayanti-2026",
@@ -36,8 +50,8 @@ window.SHIVASYA_EVENTS = [
     date: "September 20, 2026",
     name: "Festival of India — Uptown",
     type: "performance",
-    location: "Uptown Charlotte",
-    description: "Shivasya performed at the Festival of India in Uptown Charlotte, bringing dhol-tasha energy to one of the city's largest celebrations of Indian culture.",
+    location: "Blumenthal Performing Arts Center, Uptown Charlotte",
+    description: "Shivasya performed at the 30th Festival of India in Uptown Charlotte, bringing dhol-tasha energy — and the team's new “Aari Aari” fusion piece — to one of the city's largest celebrations of Indian culture.",
     photos: [],
     videos: []
   },
@@ -48,7 +62,40 @@ window.SHIVASYA_EVENTS = [
     name: "Ganesh Visarjan Miravnuk",
     type: "performance",
     location: "Hindu Center of Charlotte",
-    description: "Shivasya performed at the Ganesh Visarjan miravnuk (procession) at the Hindu Center of Charlotte, closing the Ganeshotsav celebrations with the thunderous beats of dhol and tasha.",
+    description: "Shivasya led the Ganesh Visarjan miravnuk (procession) at the Hindu Center of Charlotte — the season's biggest performance — closing the Ganeshotsav celebrations with the thunderous beats of dhol and tasha.",
+    photos: [],
+    videos: []
+  },
+  {
+    id: "triad-hindu-temple-2026",
+    year: 2026,
+    date: "September 12, 2026",
+    name: "Triad Hindu Temple Pran Pratishtha",
+    type: "performance",
+    location: "Oak Ridge (Greensboro), NC",
+    description: "Shivasya travelled to the Triad Hindu Temple in Oak Ridge, near Greensboro — the team's first away performance of the season — to perform for the temple's Pran Pratishtha (consecration) before a packed and emotional crowd.",
+    photos: [],
+    videos: []
+  },
+  {
+    id: "vedic-mandir-pran-pratishtha-2026",
+    year: 2026,
+    date: "June–September 2026",
+    name: "Vedic Mandir Pran Pratishtha Ceremonies",
+    type: "performance",
+    location: "Hindu Center of Charlotte",
+    description: "Through the summer, Shivasya performed at the new Vedic Mandir of the Hindu Center of Charlotte for a series of historic Pran Pratishtha (consecration) ceremonies — beginning with the first Ganesh Pran Pratishtha in June (led by the team's girls, with a Jal Yatra and Kalash procession), followed by the Shiv Parivar, Ram Parivar, and Jhulelal consecrations through September.",
+    photos: [],
+    videos: []
+  },
+  {
+    id: "brahmotsavam-rathyatra-2026",
+    year: 2026,
+    date: "August 23, 2026",
+    name: "Brahmotsavam Rathyatra",
+    type: "performance",
+    location: "Hindu Center of Charlotte",
+    description: "Shivasya accompanied the Rath (chariot) procession for the Brahmotsavam celebrations at the Hindu Center of Charlotte.",
     photos: [],
     videos: []
   },
@@ -64,13 +111,24 @@ window.SHIVASYA_EVENTS = [
     videos: []
   },
   {
-    id: "vedic-mandir-inauguration-2026",
+    id: "sai-guru-purnima-2026",
     year: 2026,
-    date: "July 2026",
-    name: "New Vedic Mandir Inauguration",
+    date: "July 30, 2026",
+    name: "Guru Purnima Palkhi Seva",
     type: "performance",
-    location: "Hindu Center of Charlotte",
-    description: "Shivasya delivered a powerful dhol-tasha performance at the historic inauguration of the new Vedic Mandir at the Hindu Center of Charlotte.",
+    location: "Shree Sai Gurudev Datta Mandir, Huntersville",
+    description: "Shivasya performed the Palkhi (palanquin) seva for Guru Purnima at the Shree Sai Gurudev Datta Mandir in Huntersville, during the rare Guru Pushya Yoga.",
+    photos: [],
+    videos: []
+  },
+  {
+    id: "art-of-living-2026",
+    year: 2026,
+    date: "July 25, 2026",
+    name: "Art of Living — Gurudev Sri Sri Ravi Shankar",
+    type: "performance",
+    location: "Charlotte, NC",
+    description: "Shivasya welcomed Gurudev Sri Sri Ravi Shankar to Charlotte with a dhol-tasha performance, the team in traditional Nauvari attire and pheta.",
     photos: [],
     videos: []
   },
@@ -86,13 +144,13 @@ window.SHIVASYA_EVENTS = [
     videos: []
   },
   {
-    id: "shivjayanti-5k-2026",
+    id: "tta-mega-convention-2026",
     year: 2026,
-    date: "February 28, 2026",
-    name: "Shiv Jayanti 5K Run & Walk",
-    type: "other",
-    location: "Hindu Center of Charlotte",
-    description: "The second annual Shiv Jayanti 5K Run & Walk — a community wellness event held alongside the food donation drive. Registration filled to capacity (“housefull”) this year. Led by Chinmay Kulkarni and Amit Bidre.",
+    date: "July 18, 2026",
+    name: "TTA Mega Convention 2026",
+    type: "performance",
+    location: "Charlotte Convention Center",
+    description: "Shivasya performed at the TTA (Telangana American Telugu Association) Mega Convention, marching from Romare Bearden Park to the Charlotte Convention Center and taking the main stage before thousands — representing Maharashtra in the cultural parade.",
     photos: [],
     videos: []
   },
@@ -104,6 +162,17 @@ window.SHIVASYA_EVENTS = [
     type: "community",
     location: "Hindu Center of Charlotte",
     description: "Our annual Shiv Jayanti food donation drive with the Charlotte Marathi Mandal, held at the Hindu Center of Charlotte from 8 AM. Volunteers collected and packed donations for families in need. Led by Jaanvi Holé and Mahesh Bhor.",
+    photos: [],
+    videos: []
+  },
+  {
+    id: "shivjayanti-5k-2026",
+    year: 2026,
+    date: "February 28, 2026",
+    name: "Shiv Jayanti 5K Run & Walk",
+    type: "other",
+    location: "Hindu Center of Charlotte",
+    description: "The second annual Shiv Jayanti 5K Run & Walk — a community wellness event held alongside the food donation drive. Registration filled to capacity (“housefull”) this year. Led by Chinmay Kulkarni and Amit Bidre.",
     photos: [],
     videos: []
   },
