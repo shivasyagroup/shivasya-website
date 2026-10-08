@@ -1,4 +1,5 @@
 /* Shivasya Dhol Tasha Pathak of Carolinas — site styles */
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 :root{
   --bg:#FBF3E6; --surface:#FFFDF8; --surface-alt:#F6E9D3;
   --ink:#2A1A12; --muted:#8A745F; --line:#E7D6BB;
@@ -7,6 +8,7 @@
   --hero-ink:#FCEBD3;
   --maxw:1080px; --read:720px;
   --serif:"Cinzel","Playfair Display",Georgia,serif;
+  --display:"Yatra One","Cinzel",Georgia,serif;
   --sans:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box}
@@ -45,7 +47,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.96);bo
 .hero{background:linear-gradient(180deg,rgba(44,12,18,.58) 0%,rgba(44,12,18,.66) 55%,rgba(44,12,18,.82) 100%),url("assets/hero-group.jpg") center 42%/cover no-repeat;color:var(--hero-ink);text-align:center;padding:5rem 1.25rem 4.5rem}
 .hero .logo{width:96px;height:96px;border-radius:50%;margin:0 auto .9rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}
 .hero .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;font-weight:800;opacity:.85}
-.hero h1{font-family:var(--serif);font-size:clamp(28px,5.5vw,46px);line-height:1.08;margin:.5rem auto .5rem;max-width:16ch;text-wrap:balance;font-weight:700}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5.3vw,44px);line-height:1.22;margin:.5rem auto .6rem;max-width:18ch;text-wrap:balance}
 .hero p.lead{font-size:clamp(15px,2.2vw,18px);max-width:40ch;margin:0 auto 1.4rem;opacity:.95}
 .beat{display:flex;gap:9px;align-items:center;justify-content:center;margin:0 0 1.4rem}
 .beat i{width:8px;height:8px;border-radius:50%;background:var(--saffron);display:block}
@@ -59,7 +61,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.96);bo
 
 /* ---- Page header (interior pages) ---- */
 .page-head{background:var(--crimson);color:var(--hero-ink);text-align:center;padding:2.3rem 1.25rem}
-.page-head h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,38px);margin:.1rem 0;font-weight:700}
+.page-head h1{font-family:var(--display);font-weight:400;font-size:clamp(26px,4.3vw,37px);line-height:1.2;margin:.1rem 0}
 .page-head .eyebrow{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:800;opacity:.8}
 
 /* ---- Sections ---- */
@@ -139,3 +141,10 @@ details.ev-year[open]>summary::after{transform:rotate(90deg)}
 .ev-gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
 .ev-video{position:relative;padding-bottom:56.25%;height:0;margin-top:1rem;border-radius:10px;overflow:hidden}
 .ev-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+/* ---- Instruments (About page) ---- */
+.inst-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:1.2rem}
+.inst-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.inst-card img{width:100%;height:200px;object-fit:cover;display:block;background:var(--surface-alt)}
+.inst-card .inst-body{padding:1rem 1.1rem 1.2rem}
+.inst-card h3{font-family:var(--serif);color:var(--crimson-ink);font-size:19px;margin:0 0 .4rem}
+.inst-card p{font-size:14.5px;color:var(--ink);margin:0;line-height:1.6}
