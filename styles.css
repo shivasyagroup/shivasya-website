@@ -42,7 +42,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.96);bo
 }
 
 /* ---- Hero ---- */
-.hero{background:linear-gradient(135deg,var(--crimson) 0%,#6d1120 55%,#a8450c 120%);color:var(--hero-ink);text-align:center;padding:3.4rem 1.25rem 3rem}
+.hero{background:linear-gradient(180deg,rgba(44,12,18,.58) 0%,rgba(44,12,18,.66) 55%,rgba(44,12,18,.82) 100%),url("assets/hero-group.jpg") center 42%/cover no-repeat;color:var(--hero-ink);text-align:center;padding:5rem 1.25rem 4.5rem}
 .hero .logo{width:96px;height:96px;border-radius:50%;margin:0 auto .9rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}
 .hero .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;font-weight:800;opacity:.85}
 .hero h1{font-family:var(--serif);font-size:clamp(28px,5.5vw,46px);line-height:1.08;margin:.5rem auto .5rem;max-width:16ch;text-wrap:balance;font-weight:700}
