@@ -157,3 +157,8 @@ details.ev-year[open]>summary::after{transform:rotate(90deg)}
 .award-card h3{font-family:var(--serif);color:var(--crimson-ink);font-size:19px;margin:0 0 .25rem}
 .award-card .meta{font-size:12px;font-weight:800;color:var(--saffron);margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.03em}
 .award-card p{font-size:14px;color:var(--ink);margin:0;line-height:1.55}
+
+/* ---- Award card without a photo (emblem placeholder) ---- */
+.award-card .emblem{height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;background:linear-gradient(160deg,var(--saffron-soft),var(--surface))}
+.award-card .emblem .ribbon{font-size:66px;line-height:1}
+.award-card .emblem .lbl{font-weight:800;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron)}
